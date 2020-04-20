@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // {id:1,name:'zs',age:20}
+        // 对象是无序的集合
+        // 数组是有序的集合
+
+
+        // // 1、对象的解构：把对象中的值取出来，赋值给其他变量
+        // let { name, id, nickname } = { id: 1, name: '宋江', nickname: '及时雨' };
+        // console.log(id, name, nickname);
+
+        // // 2、值多，变量少
+        // let { id, nickname } = { id: 2, name: '卢俊义', nickname: '玉麒麟' };
+        // console.log(id, nickname);
+
+        // // 3、变量多，值少
+        // let { id, name, age } = { id: 3, name: '吴用' };
+        // console.log(id, name, age);
+
+        // 4、剩余值
+        let { id, age, ...other } = { id: 4, name: '林冲', nickname: '豹子头', age: 35 };
+        console.log(id, age, other);
+    </script>
+</body>
+
+</html>

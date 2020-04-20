@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数参数的默认值
+        // 如果没有给y传递实参，那么让y=2
+        // function abc(x, y = 2) {
+        //     console.log(x + y);
+        // }
+        // abc(1);
+        // abc(1, 10);
+        // 我们传递进去的实参，优先级大于默认值
+
+
+
+        // function abc(x = 1, y = 2) {
+        //     console.log(x + y);
+        // }
+        // abc();
+        // abc(11, 12);
+
+
+        // 如果形参有默认值，那么它的位置要放到没有默认值的形参的后面，才有意义
+        function abc(y, x = 1) {
+            console.log(x + y);
+        }
+        abc(1);
+        abc(11, 12);
+
+    </script>
+</body>
+
+</html>

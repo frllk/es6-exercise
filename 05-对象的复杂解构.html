@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            name: '小明',
+            age: 28,
+            dog: {
+                name: '小黑',
+                age: 3
+            },
+            cat: {
+                name: '小花',
+                age: 2
+            }
+        };
+        // 使用对象的解构，把人的名字和小狗的名字解出来
+        // let { name, age, dog } = person;
+        // console.log(name, age, dog);
+        let { name: pname, age: page, dog: { name, age } } = person;
+        console.log(pname, page, name, age);
+        // 1.如果在解构的时候，变量的名字如果有冲突，则可以使用a:b的形式，为变量改名
+        // let x = 1;
+        // let { x: xx, y } = { x: 'haha', y: 'heihei' };
+        // console.log(xx, y);
+
+    </script>
+</body>
+
+</html>

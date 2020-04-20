@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        forEach();---遍历数组
+        find();---根据条件查找满足添加的第一个单元
+        findIndex();---根据条件查找满足添加的第一个下标
+        filter():---
+        map();
+        some();
+        every();
+        ...
+        */
+        // [2, 3, 4, 5].forEach(function (item, i) {
+        //     console.log(item);
+        // });
+        // [2, 3, 4, 5].forEach((item, i) => {
+        //     console.log(item, i);
+        // });
+        // [2, 3, 4, 5].forEach(item => console.log(item));
+
+
+        // **********************************
+        // 把一个数组中的单元，添加到另外一个数组中
+        let arr1 = [];
+        let arr2 = [1, 2, 3, 4, 5];
+        arr2.forEach(item => arr1.push(item));
+        console.log(arr2);
+
+    </script>
+</body>
+
+</html>

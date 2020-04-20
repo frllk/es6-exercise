@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // includes ---''.includes(search,[position]) 判断字符串中是否包含某个子串
+
+        // console.log('abcdef'.includes('abc'));//true
+        // console.log('abcdef'.includes('bef'));//false
+        // console.log('abcdef'.includes('b'));//true
+        // console.log('abcdef'.includes('b', 2));//false
+
+        // startsWidth---''.startsWidth(search,[position]) 判断字符串的开头是否是某个子串
+
+
+        // console.log('abcdef'.startsWith('a'));//true
+        // console.log('abcdef'.startsWith('a', 2));//false
+        // console.log('abcdef'.startsWith('c', 2));//true
+        // console.log('abcdef'.startsWith('abc'));//true
+        // console.log('abcdef'.startsWith('abcdef'));//true
+
+        // endsWidth---''.endsWidth(search,[length]) 判断字符串的结尾是否是某个子串
+
+        console.log('abcdef'.endsWith('def'));//true
+        console.log('abcdef'.endsWith('f'));//true
+        console.log('abcdef'.endsWith('bc'));//false
+        console.log('abcdef'.endsWith('b', 2));//true  从开头数2个字符。然后判断这两个字符的结尾是否是b
+
+        // repeat---''.repeat(n)  重复一个字符串
+
+        // console.log('<li>abc</li>'.repeat(10));
+
+        // trim---''.trim()  去掉字符串两边的空格和换行  
+        // console.log('   abc   '.trim());
+
+
+    </script>
+</body>
+
+</html>

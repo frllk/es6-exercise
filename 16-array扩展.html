@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Array.from  将伪数组转成数组
+        // 伪数组是对象   
+        // 还有数组的特点（key值是数字类型，并且还有length属性）
+        let obj = {
+            0: 'apple',
+            1: 'banana',
+            2: 'pear',
+            length: 3
+        }
+
+        // 为什么要把它转成数组呢？因为伪数组不能调用数组方法
+        // obj.forEach(item => console.log(itm));// obj.forEach is not a function
+
+        console.log(Array.from(obj));
+        // 回忆：我们见过那些伪数组
+        // - arguments
+        // - DOM节点列表：$('li') === document.getElementsByTagName  document.querySelectorAll('li')
+
+
+
+
+    </script>
+</body>
+
+</html>

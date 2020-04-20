@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function abc() {
+        //     return { x: 1 };
+        // }
+        // console.log(abc());
+        // 如果函数体仅仅返回一个字面量对象的话，需要给字面量对象加一个小括号();不加小括号，程序会把{}当做函数体的大括号
+        let abc = () => ({ x: 1 });
+        console.log(abc());
+    </script>
+</body>
+
+</html>

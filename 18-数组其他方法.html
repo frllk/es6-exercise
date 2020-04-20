@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 下面介绍一组语法比较类似的方法
+        // forEach()-- - 遍历数组
+        // filter()-- - 遍历数组，炸点满足条件的单元 过滤
+        // find()-- - 遍历数组，遍历的过程中，找到满足条件的第一个单元
+        // findIndex()--- 遍历数组，遍历的过程中，找到满足条件的第一个索引
+        // some()-- - 遍历数组过程中，判断数组中是否有满足条件的单元
+        // every()-- - 遍历数组过程中，判断数组中的单元是否全部满足条件
+        // map()-- - 遍历数组的过程中，使用一个函数来处理数组的每个单元
+
+
+        /*上述方法的语法：
+        [].方法名(function(item,i,self){
+            // item 数组的单元
+            // i 数组的下标
+            // self 当前的数组
+        })*/
+
+        // ***********filter()-- - 遍历数组，炸点满足条件的单元 过滤
+        let arr1 = [8, 2, 7, 10, 5, 9, 4];
+        // // 找到数组中大于5的所有单元
+        // let arr2 = arr1.filter((item, i) => item > 5);
+        // console.log(arr2);
+
+
+        // ***********find()-- - 遍历数组，遍历的过程中，找到满足条件的第一个单元
+        // 查找数组中小于5的第一个单元
+        // var arr3 = arr1.find(item => item < 5);
+        // console.log(arr3);
+
+        // ***********findIndex()--- 遍历数组，遍历的过程中，找到满足条件的第一个索引
+        // 查找数组中小于5的第一个下标
+        // var result = arr1.findIndex(item => item < 5);
+        // console.log(result);
+
+        // ***********some()-- - 遍历数组过程中，判断数组中是否有满足条件的单元
+
+        // // 判断一下，数组中是否有大于5的值，如果有，返回true；没有返回false
+        // let result = arr1.some(item => item > 5);
+        // console.log(result);
+
+
+        // ***********every()-- - 遍历数组过程中，判断数组中的单元是否全部满足条件
+
+        // // 判断下，数组中的值是否全部大于5，如果不是，返回false
+        // let result = arr1.every(item => item > 5);
+        // console.log(result);
+
+
+        // ***********map()-- - 遍历数组的过程中，使用一个函数来处理数组的每个单元
+        // // 遍历数组，并且将数组中的每个单元的平方放到一个新数组中
+        // let result = arr1.map(item => item * item);
+
+        // console.log(result);
+        // console.log(arr1);
+
+        // reduce()-- - 遍历数组的过程中，累加数组的每个单元
+        // reduce()-- - 遍历数组的过程中，累加数组的每个单元
+
+        // var result = [1, 2, 3, 4].reduce(function (a, b) {
+        //     // console.log(a);//a就是每次累加的结果
+        //     // console.log(b);//代表数组中的每个单元
+        //     // console.log(a, b);
+        //     return a + b;
+        // });
+        // // 没有指定起始值，则a使用数组的第一个元素，所有a=1
+        // // 第1次循环  a = 1, b = 2  循环结束后，a = a + b; a = 3
+        // // 第2次循环  a = 3, b = 3 循环结束后，a = a + b; a = 6
+        // // 第3次循环  a = 6, b = 4 循环结束后，a = a + b; a = 10
+        // console.log(result);
+
+
+        // reduce()的起始值是可以设定的
+        var result = [1, 2, 3, 4].reduce(function (a, b) {
+            return a + b;
+        }, 100)//提供了初始值100  
+        console.log(result);
+        // 起始值如果提供了，则使用提供的值，如果没有提供，则使用数组的第一个单元
+        // 作为第一次调用 callback函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错 
+    </script>
+</body>
+
+</html>

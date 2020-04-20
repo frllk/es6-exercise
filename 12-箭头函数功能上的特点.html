@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.箭头函数内部，没有arguments对象
+        // let abc = () => { console.log(arguments); };
+        // console.log(abc());//arguments is not defined
+
+        // 2.箭头函数内部，没有自己的this
+        // let fn = () => {
+        //     console.log(this);
+        //     // 查找一个变量this、函数内部没有找到，根据作用域链，去函数的外部进行查找，找到的结果为window对象
+        // };
+        // fn();
+
+        // var age = 123;//这里用var声明变量，否则就不能通过window.age 来调用了
+        let age = 123;
+        let obj = {
+            age: 456,
+            fn: function () {
+                console.log(this.age);
+            },
+            fn2: () => {
+                console.log(this.age);
+            }
+        }
+        obj.fn();//456 因为函数中的this
+        obj.fn2();//123 箭头函数中没有this，所以回去外层查找，所以this是window
+
+
+        // 3.箭头函数不能作为构造函数
+        // let abcd = () => {
+        //     this.age = 20;
+        //     this.name = 'zs';
+        // }
+        // let p = new abcd();//: abcd is not a constructor
+    </script>
+</body>
+
+</html>

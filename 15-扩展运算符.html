@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 可以在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；
+        // let abc = (a, b, c) => {
+        //     console.log(a, b, c);
+        // }
+
+        // // -----------调用函数时，数组类型的实参，可以使用 ...展开
+        // abc(...[1, 2, 3, 4, 5]);//===abc(1,2,3,4,5)
+
+        // -----------调用函数时，将string在语法层面展开
+        // let abc = (a, b, ...c) => {
+        //     console.log(a, b, c);
+        // }
+
+        // abc(...'hello');//===abc('h','e','l','l','o')
+
+        // -----------可以在数组构造时，将数组表达式在语法层面展开
+        // let arr1 = [1, 2, 3];
+        // let arr2 = [4, 5, 6];
+        // let arr3 = [...arr1, ...arr2];
+        // console.log(arr3);
+        // -----------可以在数组构造时，将string在语法层面展开
+        let arr4 = [...'hello'];
+        console.log(arr4);
+
+        // 还可以在构造字面量对象时, 将对象表达式按key-value的方式展开
+
+        // -----------在构造字面量对象时，将对象表达式按key-value的方式展开
+        // -----------什么样的对象，能够使用...
+        // -----------只有能够遍历的对象,才能使用...
+        let obj1 = { id: 1, name: 'zs' };
+        let obj2 = { nickname: 'lisi', age: 20 };
+
+        let fn = function () {
+            this.sayHi = function () {
+                console.log('sayHi');
+            };
+            this.height = '178cm';
+        }
+        let obj4 = new fn();
+
+        let obj3 = { ...obj1, ...obj2, ...obj4 };
+        console.log(obj3);
+    </script>
+</body>
+
+</html>

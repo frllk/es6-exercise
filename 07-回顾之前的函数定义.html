@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 之前函数的定义：
+        // function() { }
+        // var fn = new Function('x', 'y', 'return x+y');
+        // var fn = function (x, y) { return x + y };
+        // 自调用函数，为什么加小括号
+        // 原因：一条语句不能以function开头  + ! ~
+        // 自调用函数，前面可以加 + ! ~而不使用小括号
+        (function (x, y) { console.log(x + y); })(2, 3);
+        ~function (x, y) { console.log(x + y); }(2, 3);
+
+
+
+
+    </script>
+</body>
+
+</html>

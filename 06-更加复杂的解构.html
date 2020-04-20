@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            pname: '小明',
+            page: 28,
+            dog: {
+                name: '小黑',
+                age: 3,
+                child: {
+                    name: '小白',
+                    age: 1
+                }
+            }
+        };
+        let {
+            pname,
+            page,
+            dog: {
+                name: dname,
+                age: dage,
+                child: {
+                    name,
+                    age
+                }
+            }
+        } = person;
+        console.log(pname, dname, name);
+
+// 解构的时候，模式和对象的  结构  是一样的
+// 如果变量名冲突，可以使用  原变量:新变量
+
+    </script>
+</body>
+
+</html>

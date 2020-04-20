@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 有结构  数组  对象
+        // 解构：就是把数组中的值取出来分别赋值给一些变量
+
+
+        // ES6新语法
+        // let 模式=数组;   //模式和数组长得一样
+
+        // // 1.将数组中的值，取出，赋值给变量
+        // let [a, b, c] = [2, 3, 4];
+        // console.log(a, b, c);
+        // // 2.数组的值比较多--->
+        // let [obj, id, name, age] = [{ xxx: 123 }, 1, 'zs', 20, '180cm', '75kg'];
+        // console.log(obj, id, name, age);
+        // // 3.变量的数量比值多
+        // let [a, b, c, d] = [1, 2];
+        // console.log(a, b, c, d);
+        // // 4.按需取值
+        // let [a, , c] = ['关羽', '美髯公', '青龙偃月刀'];
+        // console.log(a, c);
+        // 5.剩余值   ===   剩余值碧玺是最后一个元素
+        let [a, b, ...c] = [1, 2, 3, 4, 5, 6];
+        console.log(a, b, c);
+    </script>
+</body>
+
+</html>
