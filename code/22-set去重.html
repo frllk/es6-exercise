@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数组的去重
+        let s = new Set([3, 2, 5, 4, 3, 21, 4, 53, 2, 3]);
+        console.log(s);
+        // 把对象转成数组
+        let arr = [...s];
+        console.log(arr);
+
+
+        // 字符串的去重
+        let s1 = new Set('abnmbvcabnm,gfdsazxcvcx');
+        console.log(s1);
+        let str = [...s1].join('');
+        console.log(str);
+    </script>
+</body>
+
+</html>

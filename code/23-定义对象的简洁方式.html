@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor() { }
+            sayHi() { }
+        }
+        let id = 1;
+        let name = 'zs';
+        let age = 30;
+        let obj = {
+            id,
+            name, //值和key相同的时候可以省略
+            myage: age,
+            fn1() { console.log(this.myage) },
+            fn2() { console.log(this.name) }//方法可以省略:function
+        };
+        console.log(obj);
+        obj.fn1();
+    </script>
+</body>
+
+</html>
